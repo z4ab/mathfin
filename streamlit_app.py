@@ -140,6 +140,9 @@ def portfolio_optimization():
     # Optimize portfolio
     optimal = optimize_portfolio(weights, returns)
     optimal_weights = optimal['x']
+    display = ''
+    for i in range(len(optimal_weights)):
+        display += f'{stocks[i]}: {optimal_weights[i]} | '
 
     # Create a Plotly plot for visualization
     fig = create_plotly_visualization(means, risks, optimal_weights, returns)
@@ -152,7 +155,7 @@ def portfolio_optimization():
     st.write(f"Optimal Portfolio Expected Return: {optimal_return:.4f}")
     st.write(f"Optimal Portfolio Volatility: {optimal_volatility:.4f}")
     st.write(f"Sharpe Ratio: {sharpe_ratio:.4f}")
-    st.write(f"Optimal weights: {optimal_weights}")
+    st.write(f"Optimal weights: {display}")
 
 # Streamlit page configuration
 st.title("Portfolio Optimization with Monte Carlo Simulations")
