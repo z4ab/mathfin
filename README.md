@@ -1,1 +1,1 @@
-A Streamlit app showcasing the Markowitz model for portfolio optimization
+A Streamlit app some methods in mathematical finance
