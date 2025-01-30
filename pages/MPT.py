@@ -71,7 +71,7 @@ def portfolio_optimization():
     optimal_weights = optimal['x']
 
     # Create a plot for visualization
-    create_visualization(means, risks, optimal_weights, returns)
+    create_plotly_visualization(means, risks, optimal_weights, returns)
 
     # Display the optimal portfolio statistics
     optimal_return, optimal_volatility, sharpe_ratio = statistics(optimal_weights, returns)
