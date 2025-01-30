@@ -1,1 +1,1 @@
-A Streamlit app some methods in mathematical finance
+A Streamlit app showcasing some methods in mathematical finance
